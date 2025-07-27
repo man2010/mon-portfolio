@@ -28,3 +28,6 @@ sur la branche main.
 ## Contact
 
 N'hésitez pas à me contacter pour toute question ou opportunité !
+
+## Voir le site en ligne
+[Visiter mon portfolio](https://man2010.github.io/mon-portfolio/)
