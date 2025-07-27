@@ -1,0 +1,21 @@
+name: Validate HTML
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Validate HTML
+      uses: Cyb3r-Jak3/html5validator-action@v7.1.1
+      with:
+        root: .
+    - name: Upload validation results
+      if: failure()
+      uses: actions/upload-artifact@v2
+      with:
+        name: validation-results
+        path: validation-results.log
